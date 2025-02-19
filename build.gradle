@@ -12,17 +12,19 @@ repositories {
 
 javafx {
     version = "20.0.2"
-    modules = [ 'javafx.controls' ]
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
 }
 
 application {
     mainModule = "com.example.app"
-    mainClass = "com.example.app.MyApplication"
+    mainClass = "com.example.app.Main"
 }
 
 dependencies {
     implementation "ch.qos.logback:logback-classic:$logbackVersion"
     implementation "ch.qos.logback:logback-core:$logbackVersion"
+    implementation 'org.openjfx:javafx-controls:20.0.2'
+    implementation 'org.openjfx:javafx-fxml:20.0.2'
 }
 
 jlink {

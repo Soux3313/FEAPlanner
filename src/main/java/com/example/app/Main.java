@@ -1,21 +1,12 @@
 package com.example.app;
 
 import javafx.application.Application;
-import javafx.geometry.Insets;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
-import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.StackPane;
-import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import javafx.scene.shape.Rectangle;
 
-import java.util.*;
 
 public class Main extends Application {
     //Initialize Units
@@ -82,6 +73,7 @@ public class Main extends Application {
     static Unit priam = new Unit("Priam");
 
     public static void main(String[] args) {
+
         initializePartners();
 
         launch(args);
@@ -145,15 +137,13 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws Exception {
 
-        Group root = new Group();
+
+        Parent root = FXMLLoader.load(getClass().getResource("/sample.fxml"));
         Scene scene = new Scene(root);
 
-        addParents(root);
+
 
         stage.setTitle("FE:A Inheritance Planner");
-        stage.setWidth(1200);
-        stage.setHeight(900);
-        stage.setResizable(false);
 
         stage.setScene(scene);
         stage.show();
@@ -161,55 +151,7 @@ public class Main extends Application {
 
     public void addParents(Group root)
     {
-        FlowPane parentBoxes = new FlowPane();
-        parentBoxes.setHgap(10); // Horizontal spacing
-        parentBoxes.setVgap(10); // Vertical spacing
-        parentBoxes.setPrefWrapLength(1100); // Wraps to new line when reaching this width
-        parentBoxes.setLayoutY(10); // Position near the top
 
-        // Store selected values to prevent duplicates
-        Set<String> selectedUnits = new HashSet<>();
-
-        // Map dropdowns to track previous selections
-        HashMap<ComboBox<String>, String> previousSelections = new HashMap<>();
-
-        List<Unit> parents = List.of(fRobin, mRobin, chrom, lissa, sully, miriel,
-                sumia, maribelle, cordelia, nowi, tharja,
-                olivia, cherche, panne);
-
-
-        for (Unit parent : parents) {
-            Text parentName = new Text(parent.getName());
-            parentName.setStyle("-fx-font-size: 14px; -fx-font-weight: bold;");
-
-            String[] partners = new String[parent.getPossiblePartners().length];
-            for(int i=0; i < parent.getPossiblePartners().length;i++)
-            {
-                partners[i] = parent.getPossiblePartners()[i].getName();
-            }
-
-            // Dropdown menu (ComboBox)
-            ComboBox<String> dropdown = new ComboBox<>();
-            dropdown.getItems().addAll(partners); // Replace with actual options
-            dropdown.setPromptText("none");
-
-            // Store the dropdown's previous value
-            previousSelections.put(dropdown, "None");
-
-            Rectangle border = new Rectangle(80, 40); // width, height of each box
-            border.setFill(Color.TRANSPARENT);
-            border.setStroke(Color.BLACK);
-
-            StackPane box = new StackPane(border, parentName);
-
-            // VBox to stack elements (name on top, dropdown below)
-            VBox parentContainer = new VBox(5, box, dropdown); // 5px spacing between items
-            parentContainer.setStyle("-fx-alignment: center;");
-
-            parentBoxes.getChildren().add(parentContainer);
-        }
-
-        root.getChildren().add(parentBoxes);
     }
 
 
