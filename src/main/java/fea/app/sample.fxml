@@ -6,72 +6,71 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="581.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="581.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fea.app.Controller">
    <children>
       <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="25.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@characters/Small_portrait_robin_m_fe13.png" />
+            <Image url="@/characters/Small_portrait_robin_m_fe13.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="131.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@characters/Small_portrait_chrom_l_fe13.png" />
+            <Image url="@/characters/Small_portrait_chrom_l_fe13.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="131.0" layoutY="171.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@characters/Small_portrait_cordelia_fe13.png" />
+            <Image url="@/characters/Small_portrait_cordelia_fe13.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="525.0" layoutY="354.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="251.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@characters/Small_portrait_lissa_fe13.png" />
+            <Image url="@/characters/Small_portrait_lissa_fe13.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="25.0" layoutY="171.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@characters/Small_portrait_maribelle_fe13.png" />
+            <Image url="@/characters/Small_portrait_maribelle_fe13.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="468.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@characters/Small_portrait_miriel_fe13.png" />
+            <Image url="@/characters/Small_portrait_miriel_fe13.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="360.0" layoutY="171.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@characters/Small_portrait_nowi_fe13.png" />
+            <Image url="@/characters/Small_portrait_nowi_fe13.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="251.0" layoutY="171.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@characters/Small_portrait_panne_fe13.png" />
+            <Image url="@/characters/Small_portrait_panne_fe13.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="361.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@characters/Small_portrait_sully_fe13.png" />
+            <Image url="@/characters/Small_portrait_sully_fe13.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="574.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@characters/Small_portrait_sumia_fe13.png" />
+            <Image url="@/characters/Small_portrait_sumia_fe13.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="468.0" layoutY="171.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@characters/Small_portrait_tharja_fe13.png" />
+            <Image url="@/characters/Small_portrait_tharja_fe13.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="574.0" layoutY="171.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@characters/Small_portrait_cherche_fe13.png" />
+            <Image url="@/characters/Small_portrait_cherche_fe13.png" />
          </image>
       </ImageView>
       <ChoiceBox layoutX="25.0" layoutY="117.0" prefHeight="25.0" prefWidth="80.0" />
-      <Button layoutX="93.0" layoutY="48.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="24.0" text="Button" />
+      <Button layoutX="93.0" layoutY="48.0" mnemonicParsing="false" onAction="#switchRobin" prefHeight="25.0" prefWidth="36.0" text="m/f" />
       <ChoiceBox layoutX="25.0" layoutY="273.0" prefHeight="25.0" prefWidth="80.0" />
       <ChoiceBox layoutX="574.0" layoutY="117.0" prefHeight="25.0" prefWidth="80.0" />
       <ChoiceBox layoutX="468.0" layoutY="117.0" prefHeight="25.0" prefWidth="80.0" />

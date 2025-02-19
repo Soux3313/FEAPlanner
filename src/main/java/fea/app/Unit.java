@@ -1,4 +1,4 @@
-package com.example.app;
+package fea.app;
 
 import javafx.scene.image.Image;
 

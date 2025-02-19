@@ -16,15 +16,14 @@ javafx {
 }
 
 application {
-    mainModule = "com.example.app"
-    mainClass = "com.example.app.Main"
+    mainClass = "Main"
 }
 
 dependencies {
     implementation "ch.qos.logback:logback-classic:$logbackVersion"
     implementation "ch.qos.logback:logback-core:$logbackVersion"
-    implementation 'org.openjfx:javafx-controls:20.0.2'
-    implementation 'org.openjfx:javafx-fxml:20.0.2'
+    implementation 'org.openjfx:javafx-controls:17'
+    implementation 'org.openjfx:javafx-fxml:17'
 }
 
 jlink {
@@ -33,3 +32,6 @@ jlink {
         name = 'MyApplication'
     }
 }
+
+sourceSets.main.resources.srcDirs += 'src/main/java'
+
